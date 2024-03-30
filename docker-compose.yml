@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+    web1:
+        image: php:8.2.15-apache
+        container_name: web1
+        volumes:
+          - ./web1:/var/www/html
+        ports:
+          - "8401:80"
+    web2:
+        image: php:8.2.15-apache
+        container_name: web2
+        volumes:
+          - ./web2:/var/www/html
+        ports:
+          - "8402:80"
